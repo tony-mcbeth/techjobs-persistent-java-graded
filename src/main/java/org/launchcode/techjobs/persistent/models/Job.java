@@ -13,13 +13,11 @@ public class Job extends AbstractEntity{
     @JoinColumn (name = "job.skills")
     private List<Skill> skills;
 
-    public Job() {
-    }
 
-    public Job(Employer anEmployer, List<Skill> someSkills) {
+    public Job() {
         super();
-        this.employer = anEmployer;
-        this.skills = someSkills;
+        this.employer = employer;
+        this.skills = skills;
     }
 
     // Getters and setters.

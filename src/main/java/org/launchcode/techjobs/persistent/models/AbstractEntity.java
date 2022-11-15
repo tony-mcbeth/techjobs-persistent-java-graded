@@ -23,6 +23,10 @@ public abstract class AbstractEntity {
         this.id = id;
     }
 
+    public AbstractEntity() {
+
+    }
+
     public int getId() {
         return id;
     }

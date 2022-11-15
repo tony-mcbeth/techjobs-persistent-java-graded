@@ -58,8 +58,8 @@ public class HomeController {
             model.addAttribute("title", "Add Job");
             return "add";
         } else {
-            List<Skill> skillObjs = (List<Skill>) skillRepository.findAllById(skills);
-            newJob.setSkills(skillObjs);
+            List<Skill> skillSet = (List<Skill>) skillRepository.findAllById(skills);
+            newJob.setSkills(skillSet);
 
             jobRepository.save(newJob);
 
