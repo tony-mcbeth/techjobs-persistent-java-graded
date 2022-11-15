@@ -18,10 +18,13 @@ public class Skill extends AbstractEntity {
     private List<Job> jobs = new ArrayList<>();
 
     public Skill(String description) {
+        super(id);
         this.description = description;
     }
 
-    public Skill() {}
+    public Skill() {
+        super(id);
+    }
 
     public String getDescription() {
         return description;
