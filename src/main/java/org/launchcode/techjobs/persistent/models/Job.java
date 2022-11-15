@@ -1,13 +1,13 @@
 package org.launchcode.techjobs.persistent.models;
 
 import javax.persistence.*;
+import java.util.List;
 
-import java.util.list;
 
 @Entity
 public class Job extends AbstractEntity{
 
-    @ManyToONe
+    @ManyToOne
    private Employer employer;
     @ManyToMany
     @JoinColumn (name = "job.skills")
