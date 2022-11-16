@@ -7,6 +7,8 @@ import org.launchcode.techjobs.persistent.controllers.HomeController;
 import org.launchcode.techjobs.persistent.models.AbstractEntity;
 import org.launchcode.techjobs.persistent.models.Employer;
 import org.launchcode.techjobs.persistent.models.Job;
+import org.launchcode.techjobs.persistent.models.data.EmployerRepository;
+import org.launchcode.techjobs.persistent.models.data.SkillRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.ExtendedModelMap;
 import org.springframework.ui.Model;
@@ -173,7 +175,7 @@ public class TestTaskThree extends AbstractTest {
        new Expectations() {{
             employerRepository.findAll();
        }};
-
+        Model model = new ExtendedModelMap();
        homeController.displayAddJobForm(model);
     }
 
